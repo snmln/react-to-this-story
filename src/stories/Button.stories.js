@@ -30,7 +30,7 @@ Large.args={
 
 export const LongLabel = Template.bind({})
 LongLabel.args={
-    backgroundColor: "red",
+    backgroundColor: "Blue",
     label: "Press Me Press Me Press Me Press Me Press Me Press Me Press Me ",
     size: "lg",
 }
