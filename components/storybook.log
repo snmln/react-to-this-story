@@ -1,0 +1,73 @@
+npm WARN deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+npm WARN deprecated vis@4.21.0-EOL: Please consider using https://github.com/visjs
+npm ERR! code 1
+npm ERR! path /Users/smalone1/Documents/00_projects/Bench/react-to-this-story/components/node_modules/@storybook/core-common/node_modules/esbuild
+npm ERR! command failed
+npm ERR! command sh -c -- node install.js
+npm ERR! node:internal/errors:863
+npm ERR!   const err = new Error(message);
+npm ERR!               ^
+npm ERR! 
+npm ERR! Error: Command failed: /Users/smalone1/.nvm/versions/node/v18.10.0/bin/node /Users/smalone1/Documents/00_projects/Bench/react-to-this-story/components/node_modules/@storybook/core-common/node_modules/esbuild/bin/esbuild --version
+npm ERR! node:internal/errors:484
+npm ERR!     ErrorCaptureStackTrace(err);
+npm ERR!     ^
+npm ERR! 
+npm ERR! TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension "" for /Users/smalone1/Documents/00_projects/Bench/react-to-this-story/components/node_modules/@storybook/core-common/node_modules/esbuild/bin/esbuild
+npm ERR!     at new NodeError (node:internal/errors:393:5)
+npm ERR!     at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:79:11)
+npm ERR!     at defaultGetFormat (node:internal/modules/esm/get_format:121:38)
+npm ERR!     at defaultLoad (node:internal/modules/esm/load:81:20)
+npm ERR!     at nextLoad (node:internal/modules/esm/loader:163:28)
+npm ERR!     at load$1 (file:///private/var/folders/bc/gy649sk16978mh1k_3npkvs00000gp/T/xfs-a899bab2/dlx-16347/.pnp.loader.mjs:1456:12)
+npm ERR!     at nextLoad (node:internal/modules/esm/loader:163:28)
+npm ERR!     at ESMLoader.load (node:internal/modules/esm/loader:601:26)
+npm ERR!     at ESMLoader.moduleProvider (node:internal/modules/esm/loader:457:22)
+npm ERR!     at new ModuleJob (node:internal/modules/esm/module_job:63:26) {
+npm ERR!   code: 'ERR_UNKNOWN_FILE_EXTENSION'
+npm ERR! }
+npm ERR! 
+npm ERR! Node.js v18.10.0
+npm ERR! 
+npm ERR!     at checkExecSyncError (node:child_process:871:11)
+npm ERR!     at Object.execFileSync (node:child_process:907:15)
+npm ERR!     at validateBinaryVersion (/Users/smalone1/Documents/00_projects/Bench/react-to-this-story/components/node_modules/@storybook/core-common/node_modules/esbuild/install.js:98:28)
+npm ERR!     at /Users/smalone1/Documents/00_projects/Bench/react-to-this-story/components/node_modules/@storybook/core-common/node_modules/esbuild/install.js:283:5 {
+npm ERR!   status: 1,
+npm ERR!   signal: null,
+npm ERR!   output: [
+npm ERR!     null,
+npm ERR!     Buffer(0) [Uint8Array] [],
+npm ERR!     Buffer(1061) [Uint8Array] [
+npm ERR!       110, 111, 100, 101,  58, 105, 110, 116, 101, 114, 110,  97,
+npm ERR!       108,  47, 101, 114, 114, 111, 114, 115,  58,  52,  56,  52,
+npm ERR!        10,  32,  32,  32,  32,  69, 114, 114, 111, 114,  67,  97,
+npm ERR!       112, 116, 117, 114, 101,  83, 116,  97,  99, 107,  84, 114,
+npm ERR!        97,  99, 101,  40, 101, 114, 114,  41,  59,  10,  32,  32,
+npm ERR!        32,  32,  94,  10,  10,  84, 121, 112, 101,  69, 114, 114,
+npm ERR!       111, 114,  32,  91,  69,  82,  82,  95,  85,  78,  75,  78,
+npm ERR!        79,  87,  78,  95,  70,  73,  76,  69,  95,  69,  88,  84,
+npm ERR!        69,  78,  83,  73,
+npm ERR!       ... 961 more items
+npm ERR!     ]
+npm ERR!   ],
+npm ERR!   pid: 17144,
+npm ERR!   stdout: Buffer(0) [Uint8Array] [],
+npm ERR!   stderr: Buffer(1061) [Uint8Array] [
+npm ERR!     110, 111, 100, 101,  58, 105, 110, 116, 101, 114, 110,  97,
+npm ERR!     108,  47, 101, 114, 114, 111, 114, 115,  58,  52,  56,  52,
+npm ERR!      10,  32,  32,  32,  32,  69, 114, 114, 111, 114,  67,  97,
+npm ERR!     112, 116, 117, 114, 101,  83, 116,  97,  99, 107,  84, 114,
+npm ERR!      97,  99, 101,  40, 101, 114, 114,  41,  59,  10,  32,  32,
+npm ERR!      32,  32,  94,  10,  10,  84, 121, 112, 101,  69, 114, 114,
+npm ERR!     111, 114,  32,  91,  69,  82,  82,  95,  85,  78,  75,  78,
+npm ERR!      79,  87,  78,  95,  70,  73,  76,  69,  95,  69,  88,  84,
+npm ERR!      69,  78,  83,  73,
+npm ERR!     ... 961 more items
+npm ERR!   ]
+npm ERR! }
+npm ERR! 
+npm ERR! Node.js v18.10.0
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/smalone1/.npm/_logs/2023-11-28T14_28_07_921Z-debug-0.log
