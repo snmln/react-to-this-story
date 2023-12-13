@@ -2,7 +2,7 @@
 
 Thsi project is an experiment leveraging the new Figma and Chromatic plugin to represent and document all front-end changes.
 
-Chromatic App Page: https://www.chromatic.com/builds?appId=65660f136d01acf425fc324e
+[Chromatic App Page](https://www.chromatic.com/builds?appId=65660f136d01acf425fc324e)
 
 ## To push changes to chromatic
 
