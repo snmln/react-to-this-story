@@ -9,6 +9,7 @@ const meta: Meta<Button> = {
   render: (args: Button) => ({
     props: {
       backgroundColor: null,
+
       ...args,
     },
   }),
@@ -16,26 +17,45 @@ const meta: Meta<Button> = {
     backgroundColor: {
       control: 'color',
     },
+    // type: { control: 'select', options: ['primary', 'secondary', 'secondaryGray'] }
   },
 };
 
 export default meta;
 type Story = StoryObj<Button>;
 
-// More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
+
 export const Primary: Story = {
   args: {
-    primary: true,
+    type: 'primary',
     label: 'Button',
   },
 };
 
 export const Secondary: Story = {
   args: {
+    type: 'secondary',
     label: 'Button',
   },
 };
-
+export const SecondaryGray: Story = {
+  args: {
+    type: 'secondaryGray',
+    label: 'Button',
+  },
+};
+export const Tertiary: Story = {
+  args: {
+    type: 'tertiary',
+    label: 'Button',
+  },
+};
+export const TertiaryGray: Story = {
+  args: {
+    type: 'tertiaryGray',
+    label: 'Button',
+  },
+};
 export const Large: Story = {
   args: {
     size: 'large',
@@ -43,6 +63,12 @@ export const Large: Story = {
   },
 };
 
+export const Medium: Story = {
+  args: {
+    size: 'medium',
+    label: 'Button',
+  },
+};
 export const Small: Story = {
   args: {
     size: 'small',

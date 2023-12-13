@@ -19,7 +19,7 @@ export default class ButtonComponent {
    * Is this the principal call to action on the page?
    */
   @Input()
-  primary = false;
+  type: 'primary' | 'secondary' | 'secondaryGray' | 'tertiary' | 'tertiaryGray' = 'primary';
 
   /**
    * What background color to use
@@ -48,8 +48,8 @@ export default class ButtonComponent {
   onClick = new EventEmitter<Event>();
 
   public get classes(): string[] {
-    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+    const mode = (this.type === 'secondaryGray' || this.type === 'tertiaryGray') ? (this.type === 'secondaryGray' ? 'secondary-gray' : 'tertiary-gray') : this.type;
 
-    return ['storybook-button', `storybook-button--${this.size}`, mode];
+    return ['storybook-button', `storybook-button--${this.size}`, `storybook-button--${mode}`];
   }
 }
