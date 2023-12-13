@@ -27,6 +27,9 @@ type Story = StoryObj<Button>;
 
 export const Primary: Story = {
   args: {
+    size: "large",
+    alignIcon: 'left',
+    showIcon: true,
     type: 'primary',
     label: 'Button',
   },

@@ -6,6 +6,8 @@
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
 .storybook-button--primary {
@@ -88,4 +90,28 @@
 .storybook-button--large {
   font-size: 16px;
   padding: 11px 16px;
+}
+
+.icon-left {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+}
+.icon-right {
+  margin-left: 6px;
+  width: 18px;
+  height: 18px;
+  order: 2;
+}
+.noMargin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+svg {
+  fill: currentColor;
+}
+
+.none {
+  display: none;
 }
