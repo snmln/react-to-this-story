@@ -27,7 +27,8 @@ export const Primary: Story = {
   args: {
     size: "large",
     type: 'square',
-    label: "Button"
+    label: "EI",
+    content: 'icon'
   },
 };
 

@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-@Component({
-  selector: 'storybook-button',
-  imports: [CommonModule],
-  template: ` <div
-    type="div"
-    (click)="onClick.emit($event)"
-    [ngClass]="classes"
 
+@Component({
+  selector: 'avatar',
+  imports: [CommonModule],
+  template: `<div
+    type="div"
+    [ngClass]="classes"
   >
-{{label}}
+{{ avatarContent }}
+<!-- <div [innerHTML]="avatarContent()"></div> -->
+
 <span class="icon"
 ></span>
 </div>`,
@@ -37,12 +38,8 @@ export default class AvatarComponent {
    */
   @Input()
   label = 'EI';
-
-  /**
-   * Optional click handler
-   */
-  @Output()
-  onClick = new EventEmitter<Event>();
+  @Input()
+  content: 'label' | 'icon' | 'image' = 'label';
 
   public get classes(): string[] {
 
@@ -51,8 +48,25 @@ export default class AvatarComponent {
   }
 
   public get iconClasses(): string[] {
-
-
     return [`avatar`, `avatar-${this.size}`, `${this.type}`];
+  }
+
+  public get avatarContent(): string {
+    let finalContent
+    switch (this.content) {
+      case 'icon':
+        finalContent = 'icon';
+        break;
+      case 'image':
+        finalContent = 'image';
+        break;
+      case 'label':
+        finalContent = this.label;
+        break;
+      default:
+        finalContent = this.label;
+    }
+
+    return finalContent;
   }
 }
