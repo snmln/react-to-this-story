@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import IconButton from './iconButton.component';
+import DatePicker from './datePicker.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
-const meta: Meta<IconButton> = {
-  title: 'Atoms/Icon Button',
-  component: IconButton,
+const meta: Meta<DatePicker> = {
+  title: 'Date Picker',
+  component: DatePicker,
   tags: ['autodocs'],
-  render: (args: IconButton) => ({
+  render: (args: DatePicker) => ({
     props: {
       backgroundColor: null,
 
@@ -22,13 +22,13 @@ const meta: Meta<IconButton> = {
 };
 
 export default meta;
-type Story = StoryObj<IconButton>;
+type Story = StoryObj<DatePicker>;
 
 
 export const Primary: Story = {
   args: {
     type: 'primary',
-
+    label: 'Button',
   },
 };
 

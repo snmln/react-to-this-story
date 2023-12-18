@@ -84,6 +84,11 @@
   padding: 8px 8px;
 }
 
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
 svg {
   fill: currentColor;
 }
