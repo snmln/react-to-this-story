@@ -26,7 +26,7 @@ export default class IconButtonComponent {
    * Is this the principal call to action on the page?
    */
   @Input()
-  type: 'primary' | 'secondary' | 'secondaryGray' | 'tertiary' | 'tertiaryGray' = 'primary';
+  type: 'primary' | 'secondary' | 'tertiary' | 'tonal' = 'primary';
 
   /**
    * What background color to use
@@ -44,8 +44,8 @@ export default class IconButtonComponent {
   onClick = new EventEmitter<Event>();
 
   public get classes(): string[] {
-    const mode = (this.type === 'secondaryGray' || this.type === 'tertiaryGray') ? (this.type === 'secondaryGray' ? 'secondary-gray' : 'tertiary-gray') : this.type;
 
-    return ['storybook-button', `storybook-button--large`, `storybook-button--${mode}`];
+
+    return ['storybook-button', `storybook-button--large`, `storybook-button--${this.type}`];
   }
 }

@@ -57,26 +57,20 @@
   border: rgba(25, 19, 19, 0.45) solid 1px;
 }
 
-.storybook-button--secondary-gray {
+.storybook-button--tonal {
   color: rgba(26, 19, 19, 0.87);
-  background-color: transparent;
+  background-color: rgba(252, 227, 243, 1);
+  border: 0px;
+}
+.storybook-button--tonal:hover {
+  color: rgba(26, 19, 19, 0.87);
+  background-color: rgba(243, 184, 222, 1);
+  border: 0px;
+}
+.storybook-button--tonal:disable {
+  color: rgba(28, 27, 31, 0.12);
+  background-color: rgba(28, 27, 31, 0.12);
   border: rgba(25, 19, 19, 0.45) solid 1px;
-}
-.storybook-button--secondary-gray:hover {
-  color: rgba(26, 19, 19, 0.87);
-  background-color: rgba(25, 19, 19, 0.06);
-  border: rgba(25, 19, 19, 0.45) solid 1px;
-}
-
-.storybook-button--tertiary-gray {
-  color: rgba(26, 19, 19, 0.87);
-  background-color: transparent;
-  border: 0;
-}
-.storybook-button--tertiary-gray:hover {
-  color: rgba(26, 19, 19, 0.87);
-  background-color: rgba(25, 19, 19, 0.06);
-  border: 0;
 }
 
 .storybook-button--large {
