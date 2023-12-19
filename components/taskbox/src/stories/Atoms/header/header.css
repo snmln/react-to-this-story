@@ -1,0 +1,39 @@
+.storybook-header {
+}
+/* NEED to get Allumi pro: https://fonts.adobe.com/fonts/allumi */
+h1 {
+  font-family: Klinic Slab;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+h1 .scaled {
+  font-family: Klinic Slab;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.75px;
+}
+h2 {
+  font-family: Allumi Pro;
+  font-size: 20px;
+  font-weight: 650;
+  line-height: normal;
+  letter-spacing: -0.15px;
+}
+h3 {
+  font-family: Allumi Pro;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+}

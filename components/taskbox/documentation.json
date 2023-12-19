@@ -354,7 +354,7 @@
         },
         {
             "name": "DatePickerComponent",
-            "id": "component-DatePickerComponent-692d7283c26d992be276e11ff8c47593300616d01a3d4d07349ff66884c1f76373d8b70ddc16d5c395972769985237a37674f249446e2804a68515df63a68bd4",
+            "id": "component-DatePickerComponent-87cf43a54ad576d6cec970d91273478a686f407b75b5dfb0199fff4c525f82e26a4526fa2c5d70bb85ffc85c1e4a3f27ae3c962e5c7337c13e021bfab76514fa",
             "file": "src/stories/Atoms/date-picker/datePicker.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -366,75 +366,11 @@
                 "./datePicker.css"
             ],
             "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   <div\n   type=\"div\"\nclass=\"icon\"><svg class=\"svg-icon\" viewBox=\"0 0 20 20\">\n\t\t\t\t\t\t<path d=\"M14.38,3.467l0.232-0.633c0.086-0.226-0.031-0.477-0.264-0.559c-0.229-0.081-0.48,0.033-0.562,0.262l-0.234,0.631C10.695,2.38,7.648,3.89,6.616,6.689l-1.447,3.93l-2.664,1.227c-0.354,0.166-0.337,0.672,0.035,0.805l4.811,1.729c-0.19,1.119,0.445,2.25,1.561,2.65c1.119,0.402,2.341-0.059,2.923-1.039l4.811,1.73c0,0.002,0.002,0.002,0.002,0.002c0.23,0.082,0.484-0.033,0.568-0.262c0.049-0.129,0.029-0.266-0.041-0.377l-1.219-2.586l1.447-3.932C18.435,7.768,17.085,4.676,14.38,3.467 M9.215,16.211c-0.658-0.234-1.054-0.869-1.014-1.523l2.784,0.998C10.588,16.215,9.871,16.447,9.215,16.211 M16.573,10.27l-1.51,4.1c-0.041,0.107-0.037,0.227,0.012,0.33l0.871,1.844l-4.184-1.506l-3.734-1.342l-4.185-1.504l1.864-0.857c0.104-0.049,0.188-0.139,0.229-0.248l1.51-4.098c0.916-2.487,3.708-3.773,6.222-2.868C16.187,5.024,17.489,7.783,16.573,10.27\"></path>\n\t\t\t\t\t</svg></div>\n </button>",
+            "template": "    <mat-form-field class=\"example-full-width\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\">\n    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>\n  </mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>",
             "templateUrl": [],
             "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "backgroundColor",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat background color to use\n",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 32,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 1681,
-                            "end": 1694,
-                            "flags": 4227072,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 325,
-                            "tagName": {
-                                "pos": 1682,
-                                "end": 1690,
-                                "flags": 4227072,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 79,
-                                "escapedText": "required"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "rawdescription": "\n\nButton contents\n\n",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 40,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "type",
-                    "defaultValue": "'primary'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 26,
-                    "type": "\"primary\" | \"secondary\" | \"secondaryGray\" | \"tertiary\" | \"tertiaryGray\"",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 46,
-                    "type": "EventEmitter"
-                }
-            ],
+            "inputsClass": [],
+            "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
@@ -444,7 +380,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [CommonModule],\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    <div\n    type=\"div\"\n class=\"icon\"><svg class=\"svg-icon\" viewBox=\"0 0 20 20\">\n\t\t\t\t\t\t\t<path d=\"M14.38,3.467l0.232-0.633c0.086-0.226-0.031-0.477-0.264-0.559c-0.229-0.081-0.48,0.033-0.562,0.262l-0.234,0.631C10.695,2.38,7.648,3.89,6.616,6.689l-1.447,3.93l-2.664,1.227c-0.354,0.166-0.337,0.672,0.035,0.805l4.811,1.729c-0.19,1.119,0.445,2.25,1.561,2.65c1.119,0.402,2.341-0.059,2.923-1.039l4.811,1.73c0,0.002,0.002,0.002,0.002,0.002c0.23,0.082,0.484-0.033,0.568-0.262c0.049-0.129,0.029-0.266-0.041-0.377l-1.219-2.586l1.447-3.932C18.435,7.768,17.085,4.676,14.38,3.467 M9.215,16.211c-0.658-0.234-1.054-0.869-1.014-1.523l2.784,0.998C10.588,16.215,9.871,16.447,9.215,16.211 M16.573,10.27l-1.51,4.1c-0.041,0.107-0.037,0.227,0.012,0.33l0.871,1.844l-4.184-1.506l-3.734-1.342l-4.185-1.504l1.864-0.857c0.104-0.049,0.188-0.139,0.229-0.248l1.51-4.098c0.916-2.487,3.708-3.773,6.222-2.868C16.187,5.024,17.489,7.783,16.573,10.27\"></path>\n\t\t\t\t\t\t</svg></div>\n  </button>`,\n  styleUrls: ['./datePicker.css'],\n})\nexport default class DatePickerComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  type: 'primary' | 'secondary' | 'secondaryGray' | 'tertiary' | 'tertiaryGray' = 'primary';\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = (this.type === 'secondaryGray' || this.type === 'tertiaryGray') ? (this.type === 'secondaryGray' ? 'secondary-gray' : 'tertiary-gray') : this.type;\n\n    return ['storybook-button', `storybook-button--large`, `storybook-button--${mode}`];\n  }\n\n\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatDatepickerModule } from '@angular/material/datepicker';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatNativeDateModule } from '@angular/material/core';\n@Component({\n  selector: 'storybook-button',\n  imports: [CommonModule,\n    MatFormFieldModule,\n    MatInputModule,\n    MatDatepickerModule,\n    MatNativeDateModule,\n    MatIconModule,],\n  template: `\n    <mat-form-field class=\"example-full-width\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\">\n    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>\n  </mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>`,\n  styleUrls: ['./datePicker.css'],\n})\nexport default class DatePickerComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n\n\n\n\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -452,18 +388,7 @@
                     "styleUrl": "./datePicker.css"
                 }
             ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 48
-                    }
-                }
-            }
+            "stylesData": ""
         },
         {
             "name": "HeaderComponent",
@@ -537,6 +462,101 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-071eccfc6f0d61b361df0d05d904d5b591d9842264edb39bb9c1b30d73bd37825ad5c858bedc94d9aab944db3019a38257cc3401841d344a886fb19ca8508b90-1",
+            "file": "src/stories/Atoms/header/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<div [innerHTML]=\"'<'+headerLevel+'>'+'value'+'</'+headerLevel+'>'\"></div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "headerLevel",
+                    "defaultValue": "'h1'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 16,
+                    "type": "\"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\"",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 532,
+                            "end": 545,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 533,
+                                "end": 541,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 31,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-header',\n  imports: [CommonModule],\n  template: `<div [innerHTML]=\"'<'+headerLevel+'>'+'value'+'</'+headerLevel+'>'\"></div>\n  `,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  headerLevel: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' = 'h1';\n\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: \"Nunito Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 100px;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n  display: flex;\n  align-items: center;\n}\n\n.storybook-button--primary {\n  color: white;\n  background-color: #d40e8c;\n}\n.storybook-button--primary:hover {\n  color: white;\n  background-color: #b20c75;\n}\n.storybook-button--primary:disabled {\n  color: white;\n  background-color: rgba(25, 19, 19, 0.45);\n}\n\n.storybook-button--secondary {\n  color: #d40e8c;\n  background-color: transparent;\n\n  border: #d40e8c solid 1px;\n}\n.storybook-button--secondary:hover {\n  color: #d40e8c;\n  background-color: #fcf0f8;\n\n  border: #d40e8c solid 1px;\n}\n.storybook-button--secondary:disable {\n  color: rgba(25, 19, 19, 0.45);\n  background-color: #fcf0f8;\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--tertiary {\n  color: #d40e8c;\n  background-color: transparent;\n  border: 0px;\n}\n.storybook-button--tertiary:hover {\n  color: #d40e8c;\n  background-color: #fcf0f8;\n  border: 0px;\n}\n.storybook-button--tertiary:disable {\n  color: rgba(25, 19, 19, 0.45);\n  background-color: #fcf0f8;\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--secondary-gray {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: transparent;\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n.storybook-button--secondary-gray:hover {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: rgba(25, 19, 19, 0.06);\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--tertiary-gray {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: transparent;\n  border: 0;\n}\n.storybook-button--tertiary-gray:hover {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: rgba(25, 19, 19, 0.06);\n  border: 0;\n}\n\n.storybook-button--small {\n  font-size: 14px;\n  padding: 4px 8px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 7px 9px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 11px 16px;\n}\n\n.icon-left {\n  width: 18px;\n  height: 18px;\n  margin-right: 6px;\n}\n.icon-right {\n  margin-left: 6px;\n  width: 18px;\n  height: 18px;\n  order: 2;\n}\n.noMargin {\n  margin-left: 0px !important;\n  margin-right: 0px !important;\n}\n\nsvg {\n  fill: currentColor;\n}\n\n.none {\n  display: none;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": "",
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "HeaderComponent-1"
         },
         {
             "name": "IconButtonComponent",
@@ -882,6 +902,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Atoms/header/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Header>",
+                "defaultValue": "{\n  title: 'Atoms/Header',\n  component: Header,\n  tags: ['autodocs'],\n  render: (args: Header) => ({\n    props: {\n\n      ...args,\n    },\n  }),\n  argTypes: {\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Atoms/date-picker/DatePicker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -927,6 +957,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    size: \"large\",\n    alignIcon: 'left',\n    showIcon: true,\n    type: 'primary',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Atoms/header/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    headerLevel: \"h2\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1040,6 +1080,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<Button>",
                 "file": "src/stories/Atoms/button/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 177
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Header>",
+                "file": "src/stories/Atoms/header/Header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1272,6 +1323,28 @@
                     "defaultValue": "{\n  args: {\n    size: \"large\",\n    type: 'square',\n    label: \"EI\",\n    content: 'icon'\n  },\n}"
                 }
             ],
+            "src/stories/Atoms/header/Header.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Atoms/header/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Header>",
+                    "defaultValue": "{\n  title: 'Atoms/Header',\n  component: Header,\n  tags: ['autodocs'],\n  render: (args: Header) => ({\n    props: {\n\n      ...args,\n    },\n  }),\n  argTypes: {\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Atoms/header/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    headerLevel: \"h2\",\n  },\n}"
+                }
+            ],
             "src/stories/Atoms/date-picker/DatePicker.stories.ts": [
                 {
                     "name": "meta",
@@ -1384,6 +1457,19 @@
                     "kind": 177
                 }
             ],
+            "src/stories/Atoms/header/Header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Header>",
+                    "file": "src/stories/Atoms/header/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 177
+                }
+            ],
             "src/stories/Atoms/date-picker/DatePicker.stories.ts": [
                 {
                     "name": "Story",
@@ -1414,7 +1500,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 8,
+        "count": 7,
         "status": "low",
         "files": [
             {
@@ -1609,9 +1695,38 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "DatePickerComponent",
-                "coveragePercent": 80,
-                "coverageCount": "4/5",
-                "status": "very-good"
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Atoms/header/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Atoms/header/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Atoms/header/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 75,
+                "coverageCount": "3/4",
+                "status": "good"
             },
             {
                 "filePath": "src/stories/Atoms/icon-button/IconButton.stories.ts",
