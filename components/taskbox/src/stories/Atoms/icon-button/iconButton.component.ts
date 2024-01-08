@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
   template: ` <button
     type="button"
     (click)="onClick.emit($event)"
-    [ngClass]="classes"
+    [ngClass]="storybook-ratings "
     [ngStyle]="{ 'background-color': backgroundColor }"
   >
     <div

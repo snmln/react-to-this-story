@@ -465,7 +465,7 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-071eccfc6f0d61b361df0d05d904d5b591d9842264edb39bb9c1b30d73bd37825ad5c858bedc94d9aab944db3019a38257cc3401841d344a886fb19ca8508b90-1",
+            "id": "component-HeaderComponent-267461d1cd748f1f07e05dc7887d59b6ce4fdb2494a75ca3e3295c78db37abb7e22f856c04805c7c31f886bacd85494463ff80e2d0ee87ee1f62c8219ecd2de7-1",
             "file": "src/stories/Atoms/header/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -477,7 +477,7 @@
                 "./header.css"
             ],
             "styles": [],
-            "template": "<div [innerHTML]=\"'<'+headerLevel+'>'+'value'+'</'+headerLevel+'>'\"></div>",
+            "template": "<div [innerHTML]=\"'<'+headerLevel+'>'+label+'</'+headerLevel+'>'\"></div>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -499,15 +499,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 532,
-                            "end": 545,
+                            "pos": 506,
+                            "end": 519,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 533,
-                                "end": 541,
+                                "pos": 507,
+                                "end": 515,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -519,23 +519,12 @@
                     ],
                     "rawdescription": "\n\nButton contents\n\n",
                     "description": "<p>Button contents</p>\n",
-                    "line": 25,
+                    "line": 23,
                     "type": "string",
                     "decorators": []
                 }
             ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 31,
-                    "type": "EventEmitter"
-                }
-            ],
+            "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
@@ -545,11 +534,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-header',\n  imports: [CommonModule],\n  template: `<div [innerHTML]=\"'<'+headerLevel+'>'+'value'+'</'+headerLevel+'>'\"></div>\n  `,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  headerLevel: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' = 'h1';\n\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-header',\n  imports: [CommonModule],\n  template: `<div [innerHTML]=\"'<'+headerLevel+'>'+label+'</'+headerLevel+'>'\"></div>\n  `,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  headerLevel: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' = 'h1';\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\n  font-family: \"Nunito Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 100px;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n  display: flex;\n  align-items: center;\n}\n\n.storybook-button--primary {\n  color: white;\n  background-color: #d40e8c;\n}\n.storybook-button--primary:hover {\n  color: white;\n  background-color: #b20c75;\n}\n.storybook-button--primary:disabled {\n  color: white;\n  background-color: rgba(25, 19, 19, 0.45);\n}\n\n.storybook-button--secondary {\n  color: #d40e8c;\n  background-color: transparent;\n\n  border: #d40e8c solid 1px;\n}\n.storybook-button--secondary:hover {\n  color: #d40e8c;\n  background-color: #fcf0f8;\n\n  border: #d40e8c solid 1px;\n}\n.storybook-button--secondary:disable {\n  color: rgba(25, 19, 19, 0.45);\n  background-color: #fcf0f8;\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--tertiary {\n  color: #d40e8c;\n  background-color: transparent;\n  border: 0px;\n}\n.storybook-button--tertiary:hover {\n  color: #d40e8c;\n  background-color: #fcf0f8;\n  border: 0px;\n}\n.storybook-button--tertiary:disable {\n  color: rgba(25, 19, 19, 0.45);\n  background-color: #fcf0f8;\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--secondary-gray {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: transparent;\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n.storybook-button--secondary-gray:hover {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: rgba(25, 19, 19, 0.06);\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--tertiary-gray {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: transparent;\n  border: 0;\n}\n.storybook-button--tertiary-gray:hover {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: rgba(25, 19, 19, 0.06);\n  border: 0;\n}\n\n.storybook-button--small {\n  font-size: 14px;\n  padding: 4px 8px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 7px 9px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 11px 16px;\n}\n\n.icon-left {\n  width: 18px;\n  height: 18px;\n  margin-right: 6px;\n}\n.icon-right {\n  margin-left: 6px;\n  width: 18px;\n  height: 18px;\n  order: 2;\n}\n.noMargin {\n  margin-left: 0px !important;\n  margin-right: 0px !important;\n}\n\nsvg {\n  fill: currentColor;\n}\n\n.none {\n  display: none;\n}\n",
+                    "data": ".storybook-header {\n}\n/* NEED to get Allumi pro: https://fonts.adobe.com/fonts/allumi */\nh1 {\n  font-family: Klinic Slab;\n  font-size: 32px;\n  font-weight: 400;\n  line-height: normal;\n  letter-spacing: -1px;\n}\nh1 .scaled {\n  font-family: Klinic Slab;\n  font-size: 24px;\n  font-weight: 400;\n  line-height: 30px;\n  letter-spacing: -0.75px;\n}\nh2 {\n  font-family: Allumi Pro;\n  font-size: 20px;\n  font-weight: 650;\n  line-height: normal;\n  letter-spacing: -0.15px;\n}\nh3 {\n  font-family: Allumi Pro;\n  font-size: 16px;\n  font-weight: 700;\n  line-height: 20px;\n  letter-spacing: 0.15px;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-style: normal;\n}\n",
                     "styleUrl": "./header.css"
                 }
             ],
@@ -728,6 +717,56 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "RatingComponent",
+            "id": "component-RatingComponent-e283a3b563073dfb875f2cf48314204741d77bcdb3ee2084440976218f84e0459bdb756d226e322dcf4c6f1cbda80efe7d3d601c7447186913a037536e0b90ac",
+            "file": "src/stories/Atoms/rating/rating.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-rating",
+            "styleUrls": [
+                "./rating.css"
+            ],
+            "styles": [],
+            "template": "<button mat-icon-button [color]=\"color\" *ngFor=\"let ratingId of ratingArr;index as i\" [id]=\"'star_'+i\" (click)=\"onClick(i+1)\" [matTooltip]=\"ratingId+1\" matTooltipPosition=\"above\">  <mat-icon>\n    {{showIcon(i)}}\n  </mat-icon>\n</button>\n<mat-error *ngIf=\"starCount == null || starCount == 0\">\n  Star count is <strong>required</strong> and cannot be zero\n</mat-error>\n<p class=\"body-2\">\n    Your rated <span class=\"body-2\">{{rating}}</span> / <span class=\"body-2\">{{starCount}}</span>\n</p>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "ratingNumber",
+                    "defaultValue": "2",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 29,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n\n\n\n@Component({\n  selector: 'storybook-rating',\n  imports: [CommonModule],\n  standalone: true,\n  template: `<button mat-icon-button [color]=\"color\" *ngFor=\"let ratingId of ratingArr;index as i\" [id]=\"'star_'+i\" (click)=\"onClick(i+1)\" [matTooltip]=\"ratingId+1\" matTooltipPosition=\"above\">\n  <mat-icon>\n    {{showIcon(i)}}\n  </mat-icon>\n</button>\n<mat-error *ngIf=\"starCount == null || starCount == 0\">\n  Star count is <strong>required</strong> and cannot be zero\n</mat-error>\n<p class=\"body-2\">\n    Your rated <span class=\"body-2\">{{rating}}</span> / <span class=\"body-2\">{{starCount}}</span>\n</p>`,\n  styleUrls: ['./rating.css'],\n})\nexport default class RatingComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  ratingNumber = 2;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: \"Nunito Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 100px;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n  display: flex;\n  align-items: center;\n}\n\n.storybook-button--primary {\n  color: white;\n  background-color: #d40e8c;\n}\n.storybook-button--primary:hover {\n  color: white;\n  background-color: #b20c75;\n}\n.storybook-button--primary:disabled {\n  color: white;\n  background-color: rgba(25, 19, 19, 0.45);\n}\n\n.storybook-button--secondary {\n  color: #d40e8c;\n  background-color: transparent;\n\n  border: #d40e8c solid 1px;\n}\n.storybook-button--secondary:hover {\n  color: #d40e8c;\n  background-color: #fcf0f8;\n\n  border: #d40e8c solid 1px;\n}\n.storybook-button--secondary:disable {\n  color: rgba(25, 19, 19, 0.45);\n  background-color: #fcf0f8;\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--tertiary {\n  color: #d40e8c;\n  background-color: transparent;\n  border: 0px;\n}\n.storybook-button--tertiary:hover {\n  color: #d40e8c;\n  background-color: #fcf0f8;\n  border: 0px;\n}\n.storybook-button--tertiary:disable {\n  color: rgba(25, 19, 19, 0.45);\n  background-color: #fcf0f8;\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--tonal {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: rgba(252, 227, 243, 1);\n  border: 0px;\n}\n.storybook-button--tonal:hover {\n  color: rgba(26, 19, 19, 0.87);\n  background-color: rgba(243, 184, 222, 1);\n  border: 0px;\n}\n.storybook-button--tonal:disable {\n  color: rgba(28, 27, 31, 0.12);\n  background-color: rgba(28, 27, 31, 0.12);\n  border: rgba(25, 19, 19, 0.45) solid 1px;\n}\n\n.storybook-button--large {\n  font-size: 16px;\n  padding: 8px 8px;\n}\n\nsvg {\n  fill: currentColor;\n}\n\n.none {\n  display: none;\n}\n",
+                    "styleUrl": "./rating.css"
+                }
+            ],
+            "stylesData": ""
         }
     ],
     "modules": [
@@ -782,21 +821,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true,\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false,\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true,\n}"
             },
             {
                 "name": "Large",
@@ -902,16 +941,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Atoms/header/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Header>",
-                "defaultValue": "{\n  title: 'Atoms/Header',\n  component: Header,\n  tags: ['autodocs'],\n  render: (args: Header) => ({\n    props: {\n\n      ...args,\n    },\n  }),\n  argTypes: {\n  },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Atoms/date-picker/DatePicker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -922,11 +951,31 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Atoms/header/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Header>",
+                "defaultValue": "{\n  title: 'Atoms/Header',\n  component: Header,\n  tags: ['autodocs'],\n  render: (args: Header) => ({\n    props: {\n\n      ...args,\n    },\n  }),\n  argTypes: {\n    headerLevel: { control: 'select', options: ['h1', 'h2', 'h3', 'h4', 'h5'] }\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Atoms/icon-button/IconButton.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<IconButton>",
                 "defaultValue": "{\n  title: 'Atoms/Icon Button',\n  component: IconButton,\n  tags: ['autodocs'],\n  render: (args: IconButton) => ({\n    props: {\n      backgroundColor: null,\n\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n    // type: { control: 'select', options: ['primary', 'secondary', 'secondaryGray'] }\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Atoms/rating/Rating.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Rating>",
+                "defaultValue": "{\n  title: 'Atoms/Rating',\n  component: Rating,\n  tags: ['autodocs'],\n  render: (args: Rating) => ({\n    props: {\n\n      ...args,\n    },\n  }),\n  argTypes: {\n    ratingNumber: { control: { type: 'number', min: .5, max: 5, step: .5 } }\n  },\n}"
             },
             {
                 "name": "preview",
@@ -962,16 +1011,6 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Atoms/header/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    headerLevel: \"h2\",\n  },\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Atoms/date-picker/DatePicker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -982,11 +1021,31 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Atoms/header/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    headerLevel: \"h2\",\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Atoms/icon-button/IconButton.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    type: 'primary',\n\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Atoms/rating/Rating.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ratingNumber: 2,\n\n  },\n}"
             },
             {
                 "name": "Secondary",
@@ -1089,8 +1148,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<Header>",
-                "file": "src/stories/Atoms/header/Header.stories.ts",
+                "rawtype": "StoryObj<DatePicker>",
+                "file": "src/stories/Atoms/date-picker/DatePicker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1100,8 +1159,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DatePicker>",
-                "file": "src/stories/Atoms/date-picker/DatePicker.stories.ts",
+                "rawtype": "StoryObj<Header>",
+                "file": "src/stories/Atoms/header/Header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1117,22 +1176,21 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 177
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Rating>",
+                "file": "src/stories/Atoms/rating/Rating.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 177
             }
         ],
         "enumerations": [],
         "groupedVariables": {
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true,\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -1143,6 +1201,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false,\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true,\n}"
                 }
             ],
             "src/stories/Atoms/button/Button.stories.ts": [
@@ -1323,28 +1393,6 @@
                     "defaultValue": "{\n  args: {\n    size: \"large\",\n    type: 'square',\n    label: \"EI\",\n    content: 'icon'\n  },\n}"
                 }
             ],
-            "src/stories/Atoms/header/Header.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Atoms/header/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Header>",
-                    "defaultValue": "{\n  title: 'Atoms/Header',\n  component: Header,\n  tags: ['autodocs'],\n  render: (args: Header) => ({\n    props: {\n\n      ...args,\n    },\n  }),\n  argTypes: {\n  },\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Atoms/header/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    headerLevel: \"h2\",\n  },\n}"
-                }
-            ],
             "src/stories/Atoms/date-picker/DatePicker.stories.ts": [
                 {
                     "name": "meta",
@@ -1367,6 +1415,28 @@
                     "defaultValue": "{\n  args: {\n    type: 'primary',\n    label: 'Button',\n  },\n}"
                 }
             ],
+            "src/stories/Atoms/header/Header.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Atoms/header/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Header>",
+                    "defaultValue": "{\n  title: 'Atoms/Header',\n  component: Header,\n  tags: ['autodocs'],\n  render: (args: Header) => ({\n    props: {\n\n      ...args,\n    },\n  }),\n  argTypes: {\n    headerLevel: { control: 'select', options: ['h1', 'h2', 'h3', 'h4', 'h5'] }\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Atoms/header/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    headerLevel: \"h2\",\n  },\n}"
+                }
+            ],
             "src/stories/Atoms/icon-button/IconButton.stories.ts": [
                 {
                     "name": "meta",
@@ -1387,6 +1457,28 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n  args: {\n    type: 'primary',\n\n  },\n}"
+                }
+            ],
+            "src/stories/Atoms/rating/Rating.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Atoms/rating/Rating.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Rating>",
+                    "defaultValue": "{\n  title: 'Atoms/Rating',\n  component: Rating,\n  tags: ['autodocs'],\n  render: (args: Rating) => ({\n    props: {\n\n      ...args,\n    },\n  }),\n  argTypes: {\n    ratingNumber: { control: { type: 'number', min: .5, max: 5, step: .5 } }\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Atoms/rating/Rating.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ratingNumber: 2,\n\n  },\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -1457,19 +1549,6 @@
                     "kind": 177
                 }
             ],
-            "src/stories/Atoms/header/Header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Header>",
-                    "file": "src/stories/Atoms/header/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 177
-                }
-            ],
             "src/stories/Atoms/date-picker/DatePicker.stories.ts": [
                 {
                     "name": "Story",
@@ -1483,6 +1562,19 @@
                     "kind": 177
                 }
             ],
+            "src/stories/Atoms/header/Header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Header>",
+                    "file": "src/stories/Atoms/header/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 177
+                }
+            ],
             "src/stories/Atoms/icon-button/IconButton.stories.ts": [
                 {
                     "name": "Story",
@@ -1490,6 +1582,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<IconButton>",
                     "file": "src/stories/Atoms/icon-button/IconButton.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 177
+                }
+            ],
+            "src/stories/Atoms/rating/Rating.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Rating>",
+                    "file": "src/stories/Atoms/rating/Rating.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1724,8 +1829,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "HeaderComponent",
-                "coveragePercent": 75,
-                "coverageCount": "3/4",
+                "coveragePercent": 66,
+                "coverageCount": "2/3",
                 "status": "good"
             },
             {
@@ -1756,6 +1861,35 @@
                 "coveragePercent": 60,
                 "coverageCount": "3/5",
                 "status": "good"
+            },
+            {
+                "filePath": "src/stories/Atoms/rating/Rating.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Atoms/rating/Rating.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Atoms/rating/rating.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "RatingComponent",
+                "coveragePercent": 50,
+                "coverageCount": "1/2",
+                "status": "medium"
             },
             {
                 "filePath": "src/stories/Header.stories.ts",
