@@ -13,5 +13,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  previewHead: (head) => `${head}    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  `
 };
 export default config;

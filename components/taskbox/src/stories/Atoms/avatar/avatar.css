@@ -1,0 +1,61 @@
+.avatar {
+  background-color: #6a6666;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.avatar-large {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+}
+.avatar-large > .icon {
+  background-color: #d40e8c;
+  border: 3px solid #fff;
+  border-radius: 64px;
+  width: 12px;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  height: 12px;
+}
+.avatar-medium {
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+}
+.avatar-medium > .icon {
+  background-color: #d40e8c;
+  border: 3px solid #fff;
+  border-radius: 64px;
+  width: 12px;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  height: 12px;
+}
+
+.avatar-small {
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+}
+.avatar-small > .icon {
+  background-color: #d40e8c;
+  border: 2px solid #fff;
+  border-radius: 64px;
+  width: 8px;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  height: 8px;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+.circle {
+  border-radius: 100px;
+}
